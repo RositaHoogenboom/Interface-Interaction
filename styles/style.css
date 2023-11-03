@@ -1,35 +1,192 @@
-/**************/
-/* CSS REMEDY */
-/**************/
-
-/* naar een idee van Jen Simmons */
-*, *::after, *::before {
-  box-sizing:border-box;  
-}
-
-body {
-  margin:0;
-}
-
-button:not([disabled]) {
-  cursor:pointer;
-}
-
-img {
-  max-width:100%;
-}
-
-
-
-
-
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 
 :root {
-  --color-headings:crimson
-  /* ... */
+  --background-body:rgb(243 180 186);
+  --background-body:dodgerblue;
+  --color-headings: white;
+  --color-tekst: white;
+}
+
+/* .grid{
+  display: grid;
+  grid-template-columns: 60px 60px;
+} */
+
+@font-face {
+  font-family: barbie;
+  src: url('../fonts/barbie.ttf')
+}
+
+
+/**************/
+/* CSS REMEDY */
+/**************/
+
+/* naar een idee van Jen Simmons */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  cursor: url(../images/cursorBarbie.png), auto;
+}
+
+button:not([disabled]) {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+
+/* LAYOUT */
+body {
+  margin: 0;
+  background-color: var(--background-body);
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 2fr; */
+  /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+  /* column-gap: 10px; */
+  /* row-gap: 15px; */
+  /* padding: 1em; */
+  /* justify-content: stretch; */
+  grid-template-columns: 1fr 20em;
+  grid-template-rows: max-content 1fr;
+  /* gap:1em; */
+}
+
+
+
+
+
+/* DE TITEL VAN DE PAGINA  */
+h1{
+  font-family: 'barbie';
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+
+
+
+
+
+/* DE KENS */
+main > section:nth-of-type(1) {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+  align-self: center;
+
+}
+
+main > section:nth-of-type(1) h2 {
+  position: absolute;
+  left:-9999em;
+}
+
+
+main > section:nth-of-type(1) ol {
+  list-style: none;
+
+  /* background-color: red; */
+
+  display:flex;
+  gap:10em;
+  overflow:auto;
+  
+  width:calc(100vw - 0em - 20em);
+
+  /* padding: boven, links, onder, rechts */
+  padding: 0em 15em 0em 15em; 
+}
+
+
+main > section:nth-of-type(1) ol li {
+  background-color: orange;
+
+  width:12em;
+  aspect-ratio: 1/2.2;
+
+  flex-shrink: 0;
+}
+
+
+
+
+/* INFORMATIE OVER KEN */
+
+main > section:nth-of-type(2) {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+padding:1em;
+  background-image: url('../images/tafelblad.jpeg');
+
+  display:grid;
+  grid-template-rows: 1fr 14em;
+}
+
+main > section:nth-of-type(2) h2 {
+ 
+}
+
+/*dit is de magazine cover*/
+div:nth-of-type(1) {
+  align-self: stretch;
+  justify-self: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+div:nth-of-type(1) img {
+  display: block;
+  rotate: 5deg;
+  height: 80%;
+  width: auto;
+  object-fit: contain;
+  object-position: 50% 0%;
+  box-shadow: 5px 5px 10px rgb(44, 44, 44);
+  margin:0 auto;
+}
+
+
+/*tekstvlak*/
+div:nth-of-type(2) {
+  align-self: start;
+ 
+  background-color: bisque;
+  border-style: dotted;
+  border-width: 1em;
+  border-color: white;
+
+  padding:1em;
+}
+
+div:nth-of-type(2)  p{
+
+  color: black;
 
 }
 
@@ -37,14 +194,13 @@ img {
 
 
 
-/********************/
-/* ALGEMENE STYLING */
-/********************/
 
-h1 {
-  color:var(--color-headings);
-}
 
-/* ... */
+
+
+
+
+
+
 
 
