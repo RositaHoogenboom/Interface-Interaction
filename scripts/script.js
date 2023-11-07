@@ -112,7 +112,7 @@ ken8button.onclick = toonKen8Info;
 function toonKen8Info() {
     console.log("test");
     kenH2.innerHTML = "2023 Barbie movie";
-    kenP.innerHTML = "Met de nieuwe Barbie film wordt er natuurlijk ook een nieuwe Ken pop uitgebracht.";
+    kenP.innerHTML = "Met de nieuwe Barbie film wordt er natuurlijk ook een nieuwe Ken pop uitgebracht. Met Ryan Gosling in de rol van Ken vliegen de poppen over de toonbank. De verkoop van de poppen zijn na de film met wel 16% gestegen. Ken is hot-en-happening!";
     kenImg.src = "./images/Magazines/2023.webp";
 }
 

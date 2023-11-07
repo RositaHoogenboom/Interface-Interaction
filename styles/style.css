@@ -4,15 +4,10 @@
 
 :root {
   --background-body:rgb(243 180 186);
-  /* --background-body:dodgerblue; */
   --color-headings: white;
-  --color-tekst: white; 
+  --color-tekst: white;  
 }
 
-/* .grid{
-  display: grid;
-  grid-template-columns: 60px 60px;
-} */
 
 @font-face {
   font-family: barbie;
@@ -77,8 +72,6 @@ h1{
 
 
 
-
-
 /* DE KENS */
 /* GRID PLAATSING */
 main > section:nth-of-type(1) {
@@ -105,8 +98,6 @@ main > section:nth-of-type(1) ol {
   gap:1em;
   overflow:auto;
   width:calc(100vw - 0em - 16em);
-  /* padding: boven, links, onder, rechts */
-  /* padding: 0em 15em 0em 15em;  */
   padding:2em 10vw;
 }
 
@@ -163,16 +154,10 @@ main > section:nth-of-type(2) {
   color: var(--color-tekst);
 }
 
-/* main > section:nth-of-type(2) h2 {
-} */
 
 
 /*MAGAZINE COVER*/
 div:nth-of-type(1) {
-  /* align-self: stretch;
-  justify-self: center;
-  justify-content: center;
-  align-items: center; */
   grid-column-start: 2;
   grid-row-start: 1;
   grid-row-end: 2;
