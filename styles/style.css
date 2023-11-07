@@ -35,10 +35,6 @@
   cursor: url(../images/cursorBarbie.png), auto;
 }
 
-/* button:not([disabled]) {
-  cursor: pointer;
-} */
-
 
 img {
   max-width: 100%;

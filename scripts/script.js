@@ -1,7 +1,6 @@
 // JavaScript Document
 console.log("Howdy!");
 
-
 // info
 var kenH2 = document.querySelector("section:nth-of-type(2) div:nth-of-type(2) h2");
 
@@ -113,17 +112,18 @@ ken8button.onclick = toonKen8Info;
 function toonKen8Info() {
     console.log("test");
     kenH2.innerHTML = "2023 Barbie movie";
-    kenP.innerHTML = "";
+    kenP.innerHTML = "Met de nieuwe Barbie film wordt er natuurlijk ook een nieuwe Ken pop uitgebracht.";
     kenImg.src = "./images/Magazines/2023.webp";
 }
 
+        
 //     var ken8Button = document.querySelector("section:nth-of-type(1) ol li:nth-of-type(8) button");
-//     // var geluid = new Audio("imJustKen.mp3")
-//     document.querySelector("section:nth-of-type(1) ol li:nth-of-type(8) button audio");
-    
+//     var geluid = document.querySelector("section:nth-of-type(1) ol li:nth-of-type(8) button audio"); 
+
 //     ken8Button.onclick = geluid;
    
 //     function geluid() {
+
 //         if (geluid.paused) { geluid.play(); }
 //         else {geluid.pause(); }  
 // }
