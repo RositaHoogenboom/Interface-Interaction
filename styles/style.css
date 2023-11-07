@@ -4,9 +4,9 @@
 
 :root {
   --background-body:rgb(243 180 186);
-  --background-body:dodgerblue;
+  /* --background-body:dodgerblue; */
   --color-headings: white;
-  --color-tekst: white;
+  --color-tekst: white; 
 }
 
 /* .grid{
@@ -35,9 +35,10 @@
   cursor: url(../images/cursorBarbie.png), auto;
 }
 
-button:not([disabled]) {
+/* button:not([disabled]) {
   cursor: pointer;
-}
+} */
+
 
 img {
   max-width: 100%;
@@ -54,17 +55,9 @@ body {
 main {
   width: 100vw;
   height: 100vh;
-
   display: grid;
-  /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 2fr; */
-  /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
-  /* column-gap: 10px; */
-  /* row-gap: 15px; */
-  /* padding: 1em; */
-  /* justify-content: stretch; */
   grid-template-columns: 1fr 20em;
   grid-template-rows: max-content 1fr;
-  /* gap:1em; */
 }
 
 
@@ -72,6 +65,7 @@ main {
 
 
 /* DE TITEL VAN DE PAGINA  */
+/* GRID PLAATSING */
 h1{
   font-family: 'barbie';
   text-align: center;
@@ -79,6 +73,9 @@ h1{
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 2;
+  color: var(--color-headings);
+  padding-top: .25em;
+  font-size: 5em;
 }
 
 
@@ -87,15 +84,17 @@ h1{
 
 
 /* DE KENS */
+/* GRID PLAATSING */
 main > section:nth-of-type(1) {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 2;
   grid-row-end: 3;
-
   align-self: center;
-
+  font-family: barbie;
+  font-size: 1.25em;
 }
+
 
 main > section:nth-of-type(1) h2 {
   position: absolute;
@@ -103,90 +102,127 @@ main > section:nth-of-type(1) h2 {
 }
 
 
+
 main > section:nth-of-type(1) ol {
   list-style: none;
-
-  /* background-color: red; */
-
   display:flex;
-  gap:10em;
+  gap:1em;
   overflow:auto;
-  
-  width:calc(100vw - 0em - 20em);
-
+  width:calc(100vw - 0em - 16em);
   /* padding: boven, links, onder, rechts */
-  padding: 0em 15em 0em 15em; 
+  /* padding: 0em 15em 0em 15em;  */
+  padding:2em 10vw;
 }
 
 
-main > section:nth-of-type(1) ol li {
-  background-color: orange;
 
-  width:12em;
-  aspect-ratio: 1/2.2;
-
+main > section:nth-of-type(1) ol li{
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  align-items: center;
+  color: var(--color-tekst);
+  text-align: center;
+  width:18em;
+  /* height: 30em; */
   flex-shrink: 0;
+
 }
 
+main > section:nth-of-type(1) ol li button {
+  display:block;
+  padding:0;
 
+  border: none;
+  background: none;
+  transition-duration: .3s;
+}
+
+main > section:nth-of-type(1) ol li button:hover {
+  cursor: pointer;
+}
+
+/* dit is de code die de doos aanpast wanneer je hovert */
+section:nth-of-type(1) ol li button:hover{
+  scale: 1.1;
+  /* cursor: url(../images/cursorBarbie.png), auto; */
+}
+
+/* main > section:nth-of-type(1) ol li{
+width: 100%;
+} */
 
 
 /* INFORMATIE OVER KEN */
-
+/* GRID PLAATSING */
 main > section:nth-of-type(2) {
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 3;
-padding:1em;
-  background-image: url('../images/tafelblad.jpeg');
+  padding:1em;
+  background-color: rgb(240, 194, 199);
+  /* background-image: url('../images/tafelblad.jpeg'); */
 
   display:grid;
   grid-template-rows: 1fr 14em;
+  font-family: barbie;
+  color: var(--color-tekst);
 }
 
-main > section:nth-of-type(2) h2 {
+/* main > section:nth-of-type(2) h2 {
  
-}
+} */
 
-/*dit is de magazine cover*/
+/*MAGAZINE COVER*/
 div:nth-of-type(1) {
-  align-self: stretch;
+  /* align-self: stretch;
   justify-self: center;
-
-  display: flex;
   justify-content: center;
-  align-items: center;
-
+  align-items: center; */
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
 
 div:nth-of-type(1) img {
   display: block;
   rotate: 5deg;
-  height: 80%;
+  height: fit-content;
   width: auto;
   object-fit: contain;
   object-position: 50% 0%;
   box-shadow: 5px 5px 10px rgb(44, 44, 44);
   margin:0 auto;
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
 
 
-/*tekstvlak*/
+
+/*INFO TEKSTVLAK*/
 div:nth-of-type(2) {
-  align-self: start;
  
-  background-color: bisque;
+  margin:0 1em;
+  padding:1em;
+  grid-column-start: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  align-self: stretch;
+  flex-direction: column;
+  
+  align-self: start;
+  background-color: hotpink;
   border-style: dotted;
   border-width: 1em;
-  border-color: white;
+  border-color: rgb(255, 199, 236);
 
-  padding:1em;
 }
 
 div:nth-of-type(2)  p{
-
-  color: black;
+  padding-top:1em;
+  color: var(--color-tekst);
 
 }
 
